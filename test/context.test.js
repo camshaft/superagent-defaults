@@ -17,7 +17,7 @@ describe('superagent-context', function() {
       .set({'foo': 123})
       .set({'bar': 456});
 
-    var req = superagent.get('/');
+    var req = superagent.get('http://example.com');
 
     req.request()._headers.foo.should.equal(123);
     req.request()._headers.bar.should.equal(456);
@@ -26,11 +26,11 @@ describe('superagent-context', function() {
   it('should emit `request` events', function(done) {
     superagent
       .on('request', function(req) {
-        req.url.should.eql('/this/is/the/path');
+        req.url.should.eql('http://example.com/this/is/the/path');
         done();
       });
 
-    var req = superagent.get('/this/is/the/path');
+    var req = superagent.get('http://example.com/this/is/the/path');
   });
 
 });

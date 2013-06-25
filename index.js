@@ -2,7 +2,7 @@
  * Module dependencies.
  */
  
-var superagent = require('superagent')
+var request = require('superagent')
   , methods = require('methods')
   , each = require('each-component')
   , Emitter = require('emitter');
@@ -60,7 +60,7 @@ each(methods, function(method){
  
   method = method.toUpperCase();
   Context.prototype[name] = function(url, fn){
-    var req = superagent(method, url);
+    var req = request(method, url);
  
     // Do the attaching here
     this.applyHeaders(req);
