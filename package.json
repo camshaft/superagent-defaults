@@ -1,6 +1,6 @@
 {
   "name": "superagent-defaults",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create some defaults for superagent requests",
   "main": "index.js",
   "scripts": {
@@ -14,14 +14,14 @@
   ],
   "author": "Cameron Bytheway <cameron@theflokk.com>",
   "license": "MIT",
-  "engines" : {
-    "npm" : "~1.3.0"
+  "engines": {
+    "npm": "~1.3.0"
   },
   "dependencies": {
     "superagent": "~0.14.9",
     "each-component": "CamShaft/each",
-    "emitter": "component/emitter",
-    "methods": "0.0.1"
+    "methods": "0.0.1",
+    "emitter-component": "~1.0.1"
   },
   "devDependencies": {
     "should": "~1.2.2",

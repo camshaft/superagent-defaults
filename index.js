@@ -5,7 +5,7 @@
 var request = require('superagent')
   , methods = require('methods')
   , each = require('each-component')
-  , Emitter = require('emitter');
+  , Emitter = require('emitter-component');
  
 /**
  * Expose `Context`.
