@@ -1,6 +1,6 @@
 {
   "name": "superagent-defaults",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create some defaults for superagent requests",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "superagent": "~0.14.9",
-    "each-component": "CamShaft/each",
     "methods": "0.0.1",
     "emitter-component": "~1.0.1"
   },

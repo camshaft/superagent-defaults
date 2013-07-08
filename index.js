@@ -4,7 +4,6 @@
  
 var request = require('superagent')
   , methods = require('methods')
-  , each = require('each-component')
   , Emitter = require('emitter-component');
  
 /**
@@ -48,8 +47,8 @@ Context.prototype.set = function() {
  */
  
 Context.prototype.applyHeaders = function(req) {
-  each(this.headers, function(headerArgs) {
-    req.set.apply(req, headerArgs);
+  each(this.headers, function(header) {
+    req.set.apply(req, header);
   });
 }
  
@@ -72,3 +71,17 @@ each(methods, function(method){
     return req;
   };
 });
+
+/**
+ * Iterate array-ish.
+ *
+ * @param {Array|Object} arr
+ * @param {Function} fn
+ * @api private
+ */
+
+function each(arr, fn) {
+  for (var i = 0; i < arr.length; ++i) {
+    fn(arr[i], i);
+  }
+}
