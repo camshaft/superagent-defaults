@@ -20,7 +20,8 @@
   "dependencies": {
     "superagent": "~0.14.9",
     "methods": "0.0.1",
-    "emitter-component": "~1.0.1"
+    "emitter-component": "~1.0.1",
+    "require-component": "~0.1.0"
   },
   "devDependencies": {
     "should": "~1.2.2",

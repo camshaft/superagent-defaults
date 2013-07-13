@@ -1,10 +1,12 @@
 /**
  * Module dependencies.
  */
- 
+
+require = require('require-component')(require);
+
 var request = require('superagent')
-  , methods = require('methods')
-  , Emitter = require('emitter-component');
+  , Emitter = require('emitter')
+  , methods = require('methods', './methods');
  
 /**
  * Expose `Context`.
