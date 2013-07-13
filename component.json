@@ -6,7 +6,6 @@
   "keywords": [],
   "dependencies": {
     "visionmedia/superagent": "*",
-    "visionmedia/node-methods": "*",
     "component/emitter": "*",
     "CamShaft/require-component": "*"
   },
