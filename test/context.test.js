@@ -34,14 +34,14 @@ describe('superagent-context', function() {
     var req = superagent.get('http://example.com/this/is/the/path');
   });
 
-    it('should apply default auth', function() {
-        superagent
-            .auth('abc','cde');
+  it('should apply default auth', function() {
+    superagent
+      .auth('abc','cde');
 
-        var req = superagent.get('http://example.com'),
-            expectedAuthHeader = 'Basic ' + btoa('abc:cde');
+    var req = superagent.get('http://example.com'),
+        expectedAuthHeader = 'Basic ' + btoa('abc:cde');
 
-        req.request()._headers.authorization.should.equal(expectedAuthHeader)
-    });
+    req.request()._headers.authorization.should.equal(expectedAuthHeader)
+  });
 
 });
