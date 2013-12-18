@@ -2,7 +2,8 @@
  * Module dependencies
  */
 var should = require('should')
-  , context = require('..');
+  , context = require('..')
+  , btoa = require('btoa');
 
 describe('superagent-context', function() {
 
@@ -31,6 +32,16 @@ describe('superagent-context', function() {
       });
 
     var req = superagent.get('http://example.com/this/is/the/path');
+  });
+
+  it('should apply default auth', function() {
+    superagent
+      .auth('abc','cde');
+
+    var req = superagent.get('http://example.com'),
+        expectedAuthHeader = 'Basic ' + btoa('abc:cde');
+
+    req.request()._headers.authorization.should.equal(expectedAuthHeader)
   });
 
 });

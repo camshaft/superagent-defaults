@@ -25,7 +25,8 @@
   "devDependencies": {
     "should": "~1.2.2",
     "mocha": "~1.11.0",
-    "superagent": "*"
+    "superagent": "*",
+    "btoa":"*"
   },
   "peerDependencies": {
     "superagent": ">=0.10.0"
