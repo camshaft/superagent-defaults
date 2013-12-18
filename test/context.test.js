@@ -1,9 +1,9 @@
 /**
  * Module dependencies
  */
-var should = require('should')
-  , context = require('..')
-  , btoa = require('btoa');
+
+var should = require('should');
+var context = require('..');
 
 describe('superagent-context', function() {
 
@@ -38,10 +38,10 @@ describe('superagent-context', function() {
     superagent
       .auth('abc','cde');
 
-    var req = superagent.get('http://example.com'),
-        expectedAuthHeader = 'Basic ' + btoa('abc:cde');
+    var req = superagent.get('http://example.com');
+    var expectedAuthHeader = 'Basic ' + (new Buffer('abc:cde')).toString('base64');
 
-    req.request()._headers.authorization.should.equal(expectedAuthHeader)
+    req.request()._headers.authorization.should.equal(expectedAuthHeader);
   });
 
 });
