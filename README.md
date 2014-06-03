@@ -1,4 +1,4 @@
-superagent-defaults [![Build Status](https://travis-ci.org/CamShaft/superagent-defaults.png)](https://travis-ci.org/CamShaft/superagent-defaults)
+superagent-defaults [![Build Status](https://travis-ci.org/camshaft/superagent-defaults.png)](https://travis-ci.org/camshaft/superagent-defaults)
 ===================
 
 Create some defaults for superagent requests
@@ -25,6 +25,21 @@ superagent
 superagent
   .get('/my-api')
   .end(function(res) {
+    console.log(res.text);
+  });
+```
+
+You may also pass a function that implements the superagent interface.
+
+```js
+var defaults = require('superagent-defaults');
+var supertest = require('supertest');
+
+var request = defaults(supertest(app));
+
+request
+  .get('/my-test-path')
+  .end(function(err, res) {
     console.log(res.text);
   });
 ```
