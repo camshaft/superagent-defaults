@@ -1,18 +1,18 @@
 {
   "name": "superagent-defaults",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Create some defaults for superagent requests",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test mocha"
   },
-  "repository": "https://github.com/CamShaft/superagent-defaults.git",
+  "repository": "https://github.com/camshaft/superagent-defaults.git",
   "keywords": [
     "superagent",
     "context",
     "defaults"
   ],
-  "author": "Cameron Bytheway <cameron@theflokk.com>",
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
   "license": "MIT",
   "engines": {
     "npm": "~1.3.0"
