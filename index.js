@@ -20,10 +20,11 @@ module.exports = Context;
  * @api public
  */
 
-function Context() {
-  if (!(this instanceof Context)) return new Context();
+function Context(superagent) {
+  if (!(this instanceof Context)) return new Context(superagent);
   this.headers = [];
   this.authCredentials = {};
+  this.request = superagent || request;
 }
 
 /**
@@ -73,7 +74,7 @@ each(methods, function(method){
 
   method = method.toUpperCase();
   Context.prototype[name] = function(url, fn){
-    var req = request(method, url);
+    var req = this.request(method, url);
     var auth = this.authCredentials;
 
     // Do the attaching here

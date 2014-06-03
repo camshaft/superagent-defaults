@@ -44,4 +44,15 @@ describe('superagent-context', function() {
     req.request()._headers.authorization.should.equal(expectedAuthHeader);
   });
 
+  it('should accept an superagent-like interface in the context', function(done) {
+    var interface = function(method, url) {
+      done();
+      return {
+        set: function() {}
+      };
+    };
+
+    superagent = context(interface);
+    superagent.get('http://example.com');
+  });
 });
