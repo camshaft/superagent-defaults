@@ -18,7 +18,6 @@
     "npm": "~1.3.0"
   },
   "dependencies": {
-    "methods": "0.0.1",
     "emitter-component": "~1.0.1",
     "require-component": "~0.1.0"
   },

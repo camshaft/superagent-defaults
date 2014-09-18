@@ -6,7 +6,7 @@ require = require('require-component')(require);
 
 var request = require('superagent');
 var Emitter = require('emitter');
-var methods = require('methods', './methods');
+var methods = require('./methods');
 
 /**
  * Expose `Context`.
