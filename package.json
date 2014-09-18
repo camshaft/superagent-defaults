@@ -1,6 +1,6 @@
 {
   "name": "superagent-defaults",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Create some defaults for superagent requests",
   "main": "index.js",
   "scripts": {
