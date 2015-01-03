@@ -5,14 +5,15 @@
   "version": "0.1.8",
   "keywords": [],
   "dependencies": {
-    "tj/superagent": "*",
-    "component/emitter": "*",
-    "camshaft/require-component": "*"
+    "visionmedia/superagent": "*",
+    "component/emitter": "*"
   },
   "development": {},
   "license": "MIT",
+  "main": "component.js",
   "scripts": [
-    "index.js",
-    "methods.js"
+    "component.js",
+    "lib/methods.js",
+    "lib/context"
   ]
 }
