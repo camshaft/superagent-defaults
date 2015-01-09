@@ -14,9 +14,6 @@
   ],
   "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "npm": "~1.3.0"
-  },
   "dependencies": {
     "emitter-component": "~1.0.1"
   },
