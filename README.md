@@ -16,7 +16,7 @@ var superagent = defaults();
 superagent
   .set('my-default-header', 'my-default-value')
   .auth('myUsername', 'myPassword')
-  .on(function (req){
+  .on('request', function (req) {
     console.log(req.url);
   });
 
