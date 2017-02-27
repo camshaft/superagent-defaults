@@ -24,16 +24,6 @@ describe('superagent-context', function() {
     req.request()._headers.bar.should.equal(456);
   });
 
-  it('should emit `request` events', function(done) {
-    superagent
-      .on('request', function(req) {
-        req.url.should.eql('http://example.com/this/is/the/path');
-        done();
-      });
-
-    var req = superagent.get('http://example.com/this/is/the/path');
-  });
-
   it('should apply default auth', function() {
     superagent
       .auth('abc','cde');
