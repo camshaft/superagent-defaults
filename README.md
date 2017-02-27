@@ -44,6 +44,29 @@ request
   });
 ```
 
+You can subscribe to `requestCreated`, which is emitted right after an [http method](lib/methods.js) is used,
+ before the XHR object is created.
+
+```js
+var defaults = require('superagent-defaults');
+var superagent = defaults();
+
+superagent
+  .set('my-default-header', 'my-default-value')
+  .auth('myUsername', 'myPassword')
+  .on('requestCreated', function (req) {
+    // you can modify the url
+    req.url = 'https://my-api-server.example.com' + req.url;
+  });
+
+superagent
+  .get('/my-api-path')
+  .on('request', function (req) {
+    console.log(req.url); // logs 'https://my-api-server.example.com/my-api-path'
+  })
+  .end();
+```
+
 Tests
 -----
 

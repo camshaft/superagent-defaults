@@ -2,11 +2,10 @@
   "name": "superagent-defaults",
   "repo": "camshaft/superagent-defaults",
   "description": "Create some defaults for superagent requests",
-  "version": "0.1.14",
+  "version": "0.2.0",
   "keywords": [],
   "dependencies": {
-    "visionmedia/superagent": "*",
-    "component/emitter": "*"
+    "visionmedia/superagent": "*"
   },
   "development": {},
   "license": "MIT",
