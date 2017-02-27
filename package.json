@@ -1,6 +1,6 @@
 {
   "name": "superagent-defaults",
-  "version": "0.1.14",
+  "version": "0.2.0",
   "description": "Create some defaults for superagent requests",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,6 @@
   ],
   "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "emitter-component": "~1.0.1"
-  },
   "devDependencies": {
     "should": "~1.2.2",
     "mocha": "~1.11.0",
